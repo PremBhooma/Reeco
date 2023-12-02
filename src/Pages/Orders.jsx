@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../Redux/actions";
+import * as actions from "../Redux/actions";
 
 import "./Orders.css";
 
 const Orders = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  console.log(products);
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:8080/products");
+  //     dispatch(actions.initializeProducts(response.data.products));
+  //     console.log(response.data.products);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  const handleApprove = (productId) => {
+    dispatch(actions.approveProduct(productId));
+  };
+
+  const handleMarkMissing = (productId, urgent) => {
+    dispatch(actions.markMissing(productId, urgent));
+  };
   return (
     <>
       <Navbar />
@@ -152,35 +180,78 @@ const Orders = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <img
-                      className="orderImg"
-                      src="https://i.postimg.cc/kDrm10sB/Avocado-Hass.jpg"
-                      alt=""
-                    />
-                  </td>
-                  <td className="tp">
-                    Chicken Breast Fillets, Boneless matuumaMarinated 6 Ounce
-                    Raw, Invivid
-                  </td>
-                  <td className="tdd">Hormel Black Labelmany</td>
-                  <td className="tdd">$60.67 / 6 * 1LB</td>
-                  <td className="tdd">0 x 6 * 1LB</td>
-                  <td className="tdd">0</td>
-                  <td className="tss">Actived</td>
-                  <td className="tss">
-                    <div className="orderStatus">
-                      <p>
-                        <i class="fa-solid fa-check"></i>
-                      </p>
-                      <p>
-                        <i class="fa-solid fa-xmark"></i>
-                      </p>
-                      <p>Edit</p>
-                    </div>
-                  </td>
-                </tr>
+                {products.map((product) => (
+                  <tr key={product.id}>
+                    <td>
+                      <img className="orderImg" src={product.image} alt="" />
+                    </td>
+                    <td className="tp">{product.name}</td>
+                    <td className="tdd">{product.brand}</td>
+                    <td className="tdd">{`$${product.price} / 6 * 1LB`}</td>
+                    <td className="tdd">{`${product.quantity} x 6 * 1LB`}</td>
+                    <td className="tdd">0</td>
+                    <td className="tss">{product.status}</td>
+                    <td className="tss">
+                      <div className="orderStatus">
+                        <p onClick={() => handleApprove(product.id)}>
+                          <i className="fa-solid fa-check"></i>
+                        </p>
+
+                        <p
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                          <i className="fa-solid fa-xmark"></i>
+                        </p>
+
+                        {/* modal */}
+
+                        <div
+                          className="modal fade"
+                          id="exampleModal"
+                          tabIndex={-1}
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true"
+                        >
+                          <div className="modal-dialog">
+                            <div className="modal-content">
+                              <div className="modal-header">
+                                <h1
+                                  className="modal-title fs-5"
+                                  id="exampleModalLabel"
+                                >
+                                  Missing Product
+                                </h1>
+                                <button
+                                  type="button"
+                                  className="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                />
+                              </div>
+                              <div className="modal-body">
+                                <p>
+                                  Is 'Chicken Brast Fillest, Boneless...'urgent?
+                                </p>
+                              </div>
+                              <div className="modal-footer">
+                                <a data-bs-dismiss="modal">No</a>
+                                <a
+                                  onClick={() =>
+                                    handleMarkMissing(product.id, true)
+                                  }
+                                >
+                                  Yes
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>Edit</p>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

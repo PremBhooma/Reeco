@@ -2,28 +2,25 @@
   "products": [
     {
       "id": 1,
-      "name": "Prem",
-      "price": 200
+      "name": "Chicken Breast Fillets, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
+      "image": "https://i.postimg.cc/kDrm10sB/Avocado-Hass.jpg",
+      "brand": "Hormel Black Labelmany",
+      "price": 60.67,
+      "quantity": 0,
+      "total": 0,
+      "status": "",
+      "editPopupOpen": false
     },
     {
       "id": 2,
-      "name": "Cold-drink",
-      "price": 230
-    },
-    {
-      "id": 3,
-      "name": "Momos",
-      "price": 200
-    },
-    {
-      "id": 4,
-      "name": "Pizza",
-      "price": 500
-    },
-    {
-      "id": 5,
-      "name": "Chaat",
-      "price": 100
+      "name": "Chicken Breast Fillets, Boneless matuumaMarinated 6 Ounce Raw, Invivid",
+      "image": "https://i.postimg.cc/kDrm10sB/Avocado-Hass.jpg",
+      "brand": "Hormel Black Labelmany",
+      "price": 60.67,
+      "quantity": 0,
+      "total": 0,
+      "status": "",
+      "editPopupOpen": false
     }
   ]
 }
