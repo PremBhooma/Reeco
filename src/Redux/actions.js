@@ -34,7 +34,7 @@ export const markMissing = (productId, urgent) => ({
 
 export const fetchData = () => async (dispatch) => {
     try {
-        const response = await axios.get("http://localhost:8080/products");
+        const response = await axios.get("https://reeco-data.onrender.com/products");
         dispatch(initializeProducts(response.data));
         console.log(response.data);
     } catch (error) {
