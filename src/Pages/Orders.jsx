@@ -137,7 +137,53 @@ const Orders = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-12">One of three columns</div>
+          <div class="col-md-12 table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product name</th>
+                  <th>Brand</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      className="orderImg"
+                      src="https://i.postimg.cc/kDrm10sB/Avocado-Hass.jpg"
+                      alt=""
+                    />
+                  </td>
+                  <td className="tp">
+                    Chicken Breast Fillets, Boneless matuumaMarinated 6 Ounce
+                    Raw, Invivid
+                  </td>
+                  <td className="tdd">Hormel Black Labelmany</td>
+                  <td className="tdd">$60.67 / 6 * 1LB</td>
+                  <td className="tdd">0 x 6 * 1LB</td>
+                  <td className="tdd">0</td>
+                  <td className="tss">Actived</td>
+                  <td className="tss">
+                    <div className="orderStatus">
+                      <p>
+                        <i class="fa-solid fa-check"></i>
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-xmark"></i>
+                      </p>
+                      <p>Edit</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
