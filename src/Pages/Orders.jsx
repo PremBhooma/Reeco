@@ -230,6 +230,7 @@ const Orders = () => {
                                   onClick={() =>
                                     handleMarkMissing(product.id, true)
                                   }
+                                  data-bs-dismiss="modal"
                                 >
                                   Yes
                                 </a>
