@@ -1,4 +1,3 @@
-// reducer.js
 import * as actionTypes from './actionTypes';
 
 const initialState = {
@@ -33,40 +32,6 @@ const reducer = (state = initialState, action) => {
                         : product
                 ),
             };
-
-        // case actionTypes.OPEN_EDIT_POPUP:
-        //     return {
-        //         ...state,
-        //         products: state.products.map((product) =>
-        //             product.id === action.payload.productId
-        //                 ? { ...product, editPopupOpen: true }
-        //                 : product
-        //         ),
-        //     };
-
-        // case actionTypes.CLOSE_EDIT_POPUP:
-        //     return {
-        //         ...state,
-        //         products: state.products.map((product) =>
-        //             product.editPopupOpen ? { ...product, editPopupOpen: false } : product
-        //         ),
-        //     };
-
-        // case actionTypes.UPDATE_PRODUCT:
-        //     return {
-        //         ...state,
-        //         products: state.products.map((product) =>
-        //             product.id === action.payload.productId
-        //                 ? {
-        //                     ...product,
-        //                     price: action.payload.price,
-        //                     quantity: action.payload.quantity,
-        //                     status: `Updated - ${action.payload.reason}`,
-        //                     editPopupOpen: false,
-        //                 }
-        //                 : product
-        //         ),
-        //     };
 
         default:
             return state;

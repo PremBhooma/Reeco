@@ -11,16 +11,6 @@ const Orders = () => {
   const products = useSelector((state) => state.products);
   console.log(products);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:8080/products");
-  //     dispatch(actions.initializeProducts(response.data.products));
-  //     console.log(response.data.products);
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
-
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);

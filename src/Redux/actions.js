@@ -1,4 +1,3 @@
-// actions.js
 import axios from 'axios';
 import * as actionTypes from './actionTypes';
 
@@ -16,21 +15,6 @@ export const markMissing = (productId, urgent) => ({
     type: actionTypes.MARK_MISSING,
     payload: { productId, urgent },
 });
-
-// export const openEditPopup = (productId) => ({
-//     type: actionTypes.OPEN_EDIT_POPUP,
-//     payload: { productId },
-// });
-
-// export const closeEditPopup = () => ({
-//     type: actionTypes.CLOSE_EDIT_POPUP,
-// });
-
-// export const updateProduct = (productId, price, quantity, reason) => ({
-//     type: actionTypes.UPDATE_PRODUCT,
-//     payload: { productId, price, quantity, reason },
-// });
-
 
 export const fetchData = () => async (dispatch) => {
     try {
