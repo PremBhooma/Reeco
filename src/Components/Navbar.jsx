@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <div>
               <a>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
               </a>
               <div className="nav-item dropdown">
                 <a
@@ -41,22 +41,16 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <a className="dropdown-item">Action</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <a className="dropdown-item">Another action</a>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
+                    <a className="dropdown-item">Something else here</a>
                   </li>
                 </ul>
               </div>

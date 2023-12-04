@@ -43,9 +43,9 @@ const Orders = () => {
         </div>
       </div>
 
-      <div class="container mt-5">
-        <div class="row orderDetails">
-          <div class="col-md-2">
+      <div className="container mt-5">
+        <div className="row orderDetails">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Supplier</p>
@@ -55,7 +55,7 @@ const Orders = () => {
             </div>
           </div>
 
-          <div class="col-md-2">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Shipping date</p>
@@ -64,7 +64,7 @@ const Orders = () => {
               <div className="vl"></div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Total</p>
@@ -73,37 +73,37 @@ const Orders = () => {
               <div className="vl"></div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Category</p>
                 <div>
                   <div className="categoryIcons">
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                   </div>
                   <div className="categoryIcons">
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                     <p>
-                      <i class="fa-solid fa-snowflake"></i>
+                      <i className="fa-solid fa-snowflake"></i>
                     </p>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Orders = () => {
               <div className="vl"></div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Department</p>
@@ -120,7 +120,7 @@ const Orders = () => {
               <div className="vl"></div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div className="col-md-2">
             <div className="orderDetailsBox">
               <div>
                 <p>Status</p>
@@ -132,9 +132,9 @@ const Orders = () => {
         </div>
       </div>
 
-      <div class="container mt-5">
-        <div class="row orderTable">
-          <div class="col-md-12">
+      <div className="container mt-5">
+        <div className="row orderTable">
+          <div className="col-md-12">
             <div className="orderTableBoxOne">
               <div className="search-container">
                 <input
@@ -143,20 +143,20 @@ const Orders = () => {
                   placeholder="Search..."
                 />
                 <div className="search-icon">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i className="fa-solid fa-magnifying-glass"></i>
                 </div>
               </div>
 
               <div className="orderTableButtons">
                 <button>Add item</button>
                 <p>
-                  <i class="fa-solid fa-print"></i>
+                  <i className="fa-solid fa-print"></i>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-12 table-container">
-            <table class="table">
+          <div className="col-md-12 table-container">
+            <table className="table">
               <thead>
                 <tr>
                   <th></th>
